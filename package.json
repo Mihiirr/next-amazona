@@ -8,9 +8,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@paypal/react-paypal-js": "^7.6.0",
+    "axios": "^0.26.0",
+    "bcryptjs": "^2.4.3",
+    "js-cookie": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.7",
     "next": "12.0.8",
+    "next-connect": "^0.11.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.27.0",
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
     "eslint": "8.7.0",

@@ -1,0 +1,68 @@
+.paymentPage {
+  padding: 20px 170px;
+}
+
+.paymentMethodContainer {
+  padding: 20px 200px;
+}
+
+.paymentPageTitle {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.paymentPageRadioButtonContainer {
+  height: 120px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px 0 0 15px;
+}
+
+.paymentPageradioButtons {
+  height: 19px;
+  width: 19px;
+}
+
+.paymentPageradioLables {
+  font-size: large;
+  margin-left: 10px;
+}
+
+.paymentPageContinueButton {
+  height: 40px;
+  width: 100%;
+  background-color: #f0c000;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px gray;
+}
+
+.paymentPageContinueButton:hover {
+  cursor: pointer;
+  background-color: #e6b800;
+}
+
+.paymentPageContinueButton:active {
+  background-color: #d8ad01;
+}
+
+.paymentPageBackButton {
+  height: 40px;
+  width: 100%;
+  background-color: #bebebe;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 1px 1px 2px gray;
+}
+
+.paymentPageBackButton:hover {
+    cursor: pointer;
+    background-color: #b3b3b3;
+  }
+  
+  .paymentPageBackButton:active {
+    background-color: #929292;
+  }

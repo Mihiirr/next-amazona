@@ -1,0 +1,62 @@
+.Header {
+    height: 60px;
+    width: 100%;
+    background-color: #232F3E;
+    color: white;
+    font-weight: 700;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px;
+}
+
+.AmazonaLink:hover {
+    cursor: pointer;
+}
+
+.HeaderLinks {
+    font-size: large;
+    font-weight: 400;
+    display: flex;
+}
+
+.HeaderLinks > a {
+    margin-left: 15px;
+}
+
+.usernameDropdown {
+    margin-left: 10px;
+}
+
+.usernameDropdown:hover {
+    cursor: pointer;
+    color: #cecece;
+    transition: 200ms ease-in-out;
+}
+
+.usernameDropdown:active {
+    color: #9c9c9c;
+}
+
+.HeaderLinks > a:hover {
+    cursor: pointer;
+    color: rgb(212, 212, 212);
+    transition: 200ms color ease-in;
+}
+
+.HeaderLinks > a:active {
+    color: rgb(173, 173, 173);
+}
+
+.cartCount {
+    height: 18px;
+    width: 18px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(40, 153, 68);
+    font-size: smaller;
+    margin-left: 3px;
+}

@@ -1,0 +1,68 @@
+.loginPage {
+  padding: 20px 400px;
+}
+
+.loginPageTitle {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.loginInputContainer {
+  height: 250px;
+  width: 100%;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.loginInputs {
+  height: 40px;
+  width: 100%;
+  border: 1px solid rgb(190, 190, 190);
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.loginInputs:hover {
+  border: 1px solid rgb(190, 190, 190);
+  background-color: rgb(231, 250, 255);
+}
+
+.loginInputs:focus {
+  outline: none;
+  background-color: rgb(231, 250, 255);
+}
+
+.LoginButton {
+  height: 40px;
+  width: 100%;
+  background-color: #f0c000;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 1px 1px 3px rgb(192, 192, 192);
+}
+
+.LoginButton:hover {
+  cursor: pointer;
+  background-color: #e6b800;
+}
+
+.LoginButton:active {
+  background-color: #d8ad01;
+}
+
+.registerButon {
+  color: #f0c000;
+}
+
+.registerButon:hover {
+  color: #e6b800;
+}
+
+.registerButon:active {
+  color: #d8ad01;
+}
+
+.loginInputContainer p:last-child {
+    margin-top: 10px;
+  }

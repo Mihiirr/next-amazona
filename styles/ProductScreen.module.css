@@ -1,0 +1,75 @@
+.ProductScreen {
+  padding: 20px 170px;
+}
+
+.backtoproductLink {
+  color: #f0c000;
+}
+
+.backtoproductLink:hover {
+  color: #e6b800;
+}
+
+.backtoproductLink:active {
+  color: #d8ad01;
+}
+
+.ProductScreenBody {
+  margin-top: 20px;
+  display: flex;
+}
+
+.productScreenDetails {
+  margin-left: 20px;
+}
+
+.productScreenDetails > p:first-child {
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+
+.productScreenDetails > p {
+  font-size: large;
+  margin-bottom: 9px;
+}
+
+.AddtocartContainer {
+  height: 140px;
+  width: 250px;
+  margin-left: 50px;
+  padding: 10px;
+  box-shadow: 1px 1px 2px #888888;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.AddtocartContainerTable {
+  width: 100%;
+  text-align: left;
+  font-size: large;
+}
+
+.AddtocartButton {
+  height: 40px;
+  width: 97%;
+  background-color: #f0c000;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.AddtocartButton:hover {
+  cursor: pointer;
+  background-color: #e6b800;
+}
+
+.AddtocartButton:active {
+  background-color: #d8ad01;
+}

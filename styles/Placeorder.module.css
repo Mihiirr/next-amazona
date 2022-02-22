@@ -1,0 +1,103 @@
+.placeOrderPage {
+  padding: 20px 170px;
+}
+
+.placeOrderPageTitle {
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.placeOrderMainContainer {
+  display: flex;
+}
+
+.placeOrderPageShippingAddressAndPaymentMethodContainer {
+  height: 120px;
+  width: 850px;
+  background-color: white;
+  margin-top: 10px;
+  padding: 20px 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgb(192, 192, 192);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.placeOrderPageShippingAddressAndPaymentMethodContainer p:first-child {
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.placeOrderPageOrderItemsContainer {
+  height: auto;
+  width: 850px;
+  background-color: white;
+  margin-top: 10px;
+  padding: 20px 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgb(192, 192, 192);
+}
+
+.placeOrderPageOrderItemsContainer p:first-child {
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.placeOrderPageOrderSummaryContainer {
+  height: 300px;
+  width: 320px;
+  background-color: white;
+  margin: 10px 0 0 20px;
+  padding: 20px 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgb(192, 192, 192);
+}
+
+.OrderDetailPageOrderSummaryContainer {
+  height: 350px;
+  width: 320px;
+  background-color: white;
+  margin: 10px 0 0 20px;
+  padding: 20px 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgb(192, 192, 192);
+}
+
+.placeOrderPageOrderSummaryTitleContainer {
+  height: 60px;
+  width: 100%;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.OrderSummaryItemsAndPrice {
+  height: 35px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.OrderSummaryPlaceOrderButton {
+  height: 40px;
+  width: 100%;
+  margin-top: 10px;
+  background-color: #f0c000;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.OrderSummaryPlaceOrderButton:hover {
+  cursor: pointer;
+  background-color: #e6b800;
+}
+
+.OrderSummaryPlaceOrderButton:active {
+  background-color: #d8ad01;
+}

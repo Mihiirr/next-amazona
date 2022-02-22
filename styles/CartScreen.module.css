@@ -1,0 +1,71 @@
+.cartScreen {
+  padding: 20px 170px;
+}
+
+.shoppingCartTitle {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.shoppingCartItemAndSubtotalContainer {
+  display: flex;
+}
+
+.shoppingCartTable {
+  height: 40px;
+  width: 800px;
+  padding: 10px;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.shoppingCartTableRow {
+  height: 70px;
+  border-bottom: 1px solid rgb(160, 160, 160);
+  text-align: center;
+}
+
+.shoppingCartTableButton {
+  height: 30px;
+  width: 120px;
+  background-color: rgb(255, 45, 45);
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.shoppingCartSubtotalContainer {
+  height: 170px;
+  width: 300px;
+  background-color: white;
+  box-shadow: 1px 1px 3px rgb(192, 192, 192);
+  border-radius: 5px;
+  margin-left: 25px;
+  padding: 20px;
+}
+
+.shoppingCartSubtotalTitle {
+  font-size: 25px;
+}
+
+.shoppingCartSubtotalButton {
+  height: 40px;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #f0c000;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.shoppingCartSubtotalButton:hover {
+  cursor: pointer;
+  background-color: #e6b800;
+}
+
+.shoppingCartSubtotalButton:active {
+  background-color: #d8ad01;
+}
