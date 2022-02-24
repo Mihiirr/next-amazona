@@ -78,7 +78,7 @@ function Login() {
               LOGIN
             </button>
             <p>
-              Don't have an account?{" "}
+              Don&apos;t have an account?{" "}
               <NextLink
                 href={`/register?redirect=${redirect || "/"}`}
                 className={Styles.registerButon}

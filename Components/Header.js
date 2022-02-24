@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Store } from "../utils/Store";
+import NextLink from "next/link"
 import Styles from "../styles/Header.module.css";
 
 function Header(props) {
@@ -7,25 +8,25 @@ function Header(props) {
   const { cart, userInfo } = state;
   return (
     <div className={Styles.Header}>
-      <a href="/" className={Styles.AmazonaLink}>
+      <NextLink href="/" className={Styles.AmazonaLink}>
         Amazona
-      </a>
+      </NextLink>
 
       <div className={Styles.HeaderLinks}>
         {cart.cartItems.length > 0 ? (
           <>
-            <a href="/cart">Cart</a>
+            <NextLink href="/cart">Cart</NextLink>
             <div className={Styles.cartCount}>{cart.cartItems.length}</div>
           </>
         ) : (
-          <a href="/cart">Cart</a>
+          <NextLink href="/cart">Cart</NextLink>
         )}
         {userInfo ? (
           <div className={Styles.usernameDropdown} onClick={props.dropDownHandler}>
             <p>{userInfo.name}</p>
           </div>
         ) : (
-          <a href="/login">Login</a>
+          <NextLink href="/login">Login</NextLink>
         )}
       </div>
     </div>
