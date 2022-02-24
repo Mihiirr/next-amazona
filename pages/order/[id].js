@@ -5,7 +5,6 @@ import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 import NextLink from "next/link";
 import Image from "next/image";
 import axios from "axios";
-import { getError } from "../../utils/error";
 
 // Components.
 import Layout from "../../Components/Layout";
@@ -93,7 +92,7 @@ function Order({ params }) {
         });
         await dispatch({ type: "FETCH_SUCCESS", payload: data });
       } catch (err) {
-        dispatch({ type: "FETCH_FAIL", payload: getError(err) });
+        dispatch({ type: "FETCH_FAIL", payload: err });
       }
     };
 
@@ -155,14 +154,14 @@ function Order({ params }) {
         dispatch({ type: "PAY_SUCCESS", payload: data });
         alert("Order is paid");
       } catch (err) {
-        dispatch({ type: "PAY_FAIL", payload: getError(err) });
-        alert(getError(err));
+        dispatch({ type: "PAY_FAIL", payload: err });
+        alert(err);
       }
     });
   }
 
   function onError(err) {
-    alert(getError(err));
+    alert(err);
   }
 
   return (

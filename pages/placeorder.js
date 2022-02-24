@@ -6,8 +6,6 @@ import NextLink from "next/link";
 import Image from "next/image";
 import axios from "axios";
 
-import { getError } from "../utils/error";
-
 // Components.
 import Layout from "../Components/Layout";
 import OrderTracking from "../Components/OrderTracking";
@@ -64,7 +62,7 @@ function Placeorder() {
       Cookies.remove("cartItems");
       router.push(`order/${data._id}`);
     } catch (err) {
-      alert(getError(err));
+      alert(err);
     }
   };
 
