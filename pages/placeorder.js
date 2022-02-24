@@ -16,7 +16,7 @@ import OrderTracking from "../Components/OrderTracking";
 import Styles from "../styles/Placeorder.module.css";
 import CartScreenStyles from "../styles/CartScreen.module.css";
 
-function placeorder() {
+function Placeorder() {
   const router = useRouter();
   const { state, dispatch } = useContext(Store);
   const {
@@ -167,4 +167,4 @@ function placeorder() {
   );
 }
 
-export default placeorder;
+export default Placeorder;

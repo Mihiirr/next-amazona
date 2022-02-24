@@ -12,7 +12,7 @@ import OrderTracking from "../Components/OrderTracking";
 import Styles from "../styles/Shipping.module.css";
 import LoginStyles from "../styles/Login.module.css";
 
-function shipping() {
+function Shipping() {
   const {
     register,
     handleSubmit,
@@ -166,4 +166,4 @@ function shipping() {
   );
 }
 
-export default shipping;
+export default Shipping;

@@ -10,7 +10,7 @@ import OrderTracking from "../Components/OrderTracking";
 // Styles.
 import Styles from "../styles/Payment.module.css";
 
-function payment() {
+function Payment() {
   const [paymentMethod, setPaymentMethod] = useState("");
   const router = useRouter();
   const { state, dispatch } = useContext(Store);
@@ -110,4 +110,4 @@ function payment() {
   );
 }
 
-export default payment;
+export default Payment;

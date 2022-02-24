@@ -11,7 +11,7 @@ import Layout from "../Components/Layout";
 // Styles.
 import Styles from "../styles/Login.module.css";
 
-function register() {
+function Register() {
   const {
     register,
     handleSubmit,
@@ -119,4 +119,4 @@ function register() {
   );
 }
 
-export default register;
+export default Register;

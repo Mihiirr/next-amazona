@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { StoreProvider } from "../utils/Store";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js"
 
