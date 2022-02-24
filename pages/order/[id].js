@@ -57,7 +57,7 @@ function Order({ params }) {
   const { userInfo } = state;
 
   const [
-    { loading, error, order, successPay, loadingDeliver, successDeliver },
+    { loading, order, successPay, loadingDeliver, successDeliver },
     dispatch,
   ] = useReducer(reducer, {
     loading: true,
@@ -126,7 +126,7 @@ function Order({ params }) {
       };
       loadPaypalScript();
     }
-  }, [order]);
+  }, [order, successPay, successDeliver]);
 
   function createOrder(data, actions) {
     return actions.order
@@ -168,7 +168,7 @@ function Order({ params }) {
   return (
     <Layout>
       <div className={Styles.placeOrderPage}>
-        <OrderTracking />
+        {/* <OrderTracking /> */}
         <p className={Styles.placeOrderPageTitle}>Order {orderId}</p>
         {loading ? (
           <p>Loading...</p>
