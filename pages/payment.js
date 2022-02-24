@@ -59,7 +59,7 @@ function Payment() {
                   onChange={(e) => setPaymentMethod(e.target.value)}
                   className={Styles.paymentPageradioButtons}
                 />
-                <label for="paypal" className={Styles.paymentPageradioLables}>
+                <label htmlFor="paypal" className={Styles.paymentPageradioLables}>
                   PayPal
                 </label>
               </div>
@@ -73,7 +73,7 @@ function Payment() {
                   onChange={(e) => setPaymentMethod(e.target.value)}
                   className={Styles.paymentPageradioButtons}
                 />
-                <label for="stripe" className={Styles.paymentPageradioLables}>
+                <label htmlFor="stripe" className={Styles.paymentPageradioLables}>
                   Stripe
                 </label>
               </div>
@@ -87,7 +87,7 @@ function Payment() {
                   onChange={(e) => setPaymentMethod(e.target.value)}
                   className={Styles.paymentPageradioButtons}
                 />
-                <label for="cash" className={Styles.paymentPageradioLables}>
+                <label htmlFor="cash" className={Styles.paymentPageradioLables}>
                   Cash
                 </label>
               </div>

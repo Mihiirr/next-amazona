@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import NextLink from "next/link";
 import axios from "axios";
 import { Store } from "../../utils/Store";
 import Product from "../../models/Product";
@@ -28,16 +29,19 @@ function ProductScreen(props) {
       window.alert("Sorry. Product is out of stock");
       return;
     }
-    await dispatch({ type: "CART_ADD_ITEM", payload: { ...product, quantity } });
+    await dispatch({
+      type: "CART_ADD_ITEM",
+      payload: { ...product, quantity },
+    });
     await router.push("/cart");
   };
 
   return (
     <Layout title={`${product.name} - Amazona`}>
       <div className={styles.ProductScreen}>
-        <a href="/" className={styles.backtoproductLink}>
+        <NextLink href="/" className={styles.backtoproductLink}>
           <strong>back to products</strong>
-        </a>
+        </NextLink>
         <div className={styles.ProductScreenBody}>
           {/* Product Image */}
           <Image

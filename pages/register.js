@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Store } from "../utils/Store";
 import { useRouter } from "next/router";
+import NextLink from "next/link";
 import Cookies from "js-cookie";
 import axios from "axios";
 import { useForm } from "react-hook-form";
@@ -105,12 +106,12 @@ function Register() {
             </button>
             <p>
               Already have an account?{" "}
-              <a
+              <NextLink
                 href={`/login?redirect=${redirect || "/"}`}
                 className={Styles.registerButon}
               >
                 Login here
-              </a>
+              </NextLink>
             </p>
           </div>
         </form>

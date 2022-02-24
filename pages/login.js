@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Store } from "../utils/Store";
 import { useRouter } from "next/router";
+import NextLink from "next/link"
 import Cookies from "js-cookie";
 import axios from "axios";
 import { useForm } from "react-hook-form";
@@ -15,7 +16,6 @@ function Login() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
   } = useForm();
   const router = useRouter();
   const { redirect } = router.query; // login?redirect = /shipping
@@ -79,12 +79,12 @@ function Login() {
             </button>
             <p>
               Don't have an account?{" "}
-              <a
+              <NextLink
                 href={`/register?redirect=${redirect || "/"}`}
                 className={Styles.registerButon}
               >
                 Register here
-              </a>
+              </NextLink>
             </p>
           </div>
         </form>
