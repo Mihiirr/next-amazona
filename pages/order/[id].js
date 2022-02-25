@@ -1,14 +1,13 @@
 import React, { useEffect, useContext, useReducer } from "react";
 import { Store } from "../../utils/Store";
 import { useRouter } from "next/router";
-import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 import NextLink from "next/link";
 import Image from "next/image";
 import axios from "axios";
+import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 
 // Components.
 import Layout from "../../Components/Layout";
-import OrderTracking from "../../Components/OrderTracking";
 
 // Styles.
 import Styles from "../../styles/Placeorder.module.css";
@@ -56,7 +55,7 @@ function Order({ params }) {
   const { userInfo } = state;
 
   const [
-    { loading, order, successPay, loadingDeliver, successDeliver },
+    { loading, error, order, successPay, loadingDeliver, successDeliver },
     dispatch,
   ] = useReducer(reducer, {
     loading: true,
@@ -90,7 +89,7 @@ function Order({ params }) {
             authorization: `Bearer ${userInfo.token}`,
           },
         });
-        await dispatch({ type: "FETCH_SUCCESS", payload: data });
+        dispatch({ type: "FETCH_SUCCESS", payload: data });
       } catch (err) {
         dispatch({ type: "FETCH_FAIL", payload: err });
       }
@@ -164,13 +163,32 @@ function Order({ params }) {
     alert(err);
   }
 
+  async function deliverOrderHandler() {
+    try {
+      dispatch({ type: "DELIVER_REQUEST" });
+      const { data } = await axios.put(
+        `/api/orders/${order._id}/deliver`,
+        {},
+        {
+          headers: { authorization: `Bearer ${userInfo.token}` },
+        }
+      );
+      dispatch({ type: "DELIVER_SUCCESS", payload: data });
+      alert("Order is delivered");
+    } catch (err) {
+      dispatch({ type: "DELIVER_FAIL", payload: err });
+      alert(err);
+    }
+  }
+
   return (
     <Layout>
       <div className={Styles.placeOrderPage}>
-        {/* <OrderTracking /> */}
         <p className={Styles.placeOrderPageTitle}>Order {orderId}</p>
         {loading ? (
           <p>Loading...</p>
+        ) : error ? (
+          <p>{error}</p>
         ) : (
           <div className={Styles.placeOrderMainContainer}>
             <div>
@@ -182,10 +200,8 @@ function Order({ params }) {
                 <p>Shipping Address</p>
 
                 <p>
-                  {shippingAddress.fullName}
-                  {", "}
-                  {shippingAddress.address}, {shippingAddress.city},{" "}
-                  {shippingAddress.postalCode}
+                  {shippingAddress.fullName},{shippingAddress.address},{" "}
+                  {shippingAddress.city},{shippingAddress.postalCode}
                   <br />
                   <strong>Status:</strong>{" "}
                   {isDelivered
@@ -231,7 +247,7 @@ function Order({ params }) {
                           ></Image>
                         </td>
                         <td>
-                          <NextLink href={`/product/${item.slug}`}>
+                          <NextLink href={`/product/${item.slug}`} passHref>
                             {item.name}
                           </NextLink>
                         </td>
@@ -275,13 +291,20 @@ function Order({ params }) {
                     <p>Loading</p>
                   ) : (
                     <div>
-                      <PayPalButtons
+                      {/* <PayPalButtons
                         createOrder={createOrder}
                         onApprove={onApprove}
                         onError={onError}
-                      />
+                      ></PayPalButtons> */}
+                      hello
                     </div>
                   )}
+                </div>
+              )}
+              {userInfo.isAdmin && order.isPaid && !order.isDelivered && (
+                <div>
+                  {loadingDeliver && <p>Loading</p>}
+                  <button onClick={deliverOrderHandler}>Deliver Order</button>
                 </div>
               )}
             </div>
