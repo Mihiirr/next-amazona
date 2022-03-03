@@ -62,13 +62,13 @@ then automatically be deployed by Vercel, through its
 it already then skip this step:
 
 ```sh
-- npm install -g yarn
+npm install -g yarn
 ```
 
 `Step:2` Install all dependencies:
  
  ```sh
-- yarn install
+yarn install
 ```
 
 # Install PlanetScale CLI - Windows
@@ -77,43 +77,43 @@ it already then skip this step:
 Framework 4.5 (or later) are installed. Then run:
 
 ```sh
-- Invoke-Expression (New-ObjectSystem.Net.WebClient).DownloadString('https://get.scoop.sh')
+Invoke-Expression (New-ObjectSystem.Net.WebClient).DownloadString('https://get.scoop.sh')
 ```
 Note: if you get an error you might need to change the execution policy (i.e.
 enable Powershell) with below code and run again step:1
 
 ```sh
-- Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```
 
 `Step:4` Scoop installs the tools you know and love:
 
 ```sh
-- scoop install curl
+scoop install curl
 ```
 
 `Step:5`
 
 ```sh
-- scoop bucket add pscale https://github.com/planetscale/scoop-bucket.git
+scoop bucket add pscale https://github.com/planetscale/scoop-bucket.git
 ```
 
 `Step:6` Install pscale:
 
 ```sh
-- scoop install pscale
+scoop install pscale
 ```
 
 To upgrade to the latest version:
 
 ```sh
-- scoop update pscale
+scoop update pscale
 ```
 
 `Step:7` Verify that you're using the latest version:
 
 ```sh
-- pscale version
+pscale version
 ```
 
 # Connect database
@@ -121,23 +121,23 @@ To upgrade to the latest version:
 `Step:8` Generate prisma client:
 
 ```sh
-- yarn prisma:generate
+yarn prisma:generate
 ```
 
 If this throws error run:
 
 ```sh
-- npx prisma generate
+npx prisma generate
 ```
 
 `Step:9` Connect database using:
 
 ```sh
-- yarn connect:database:develop
+yarn connect:database:develop
 ```
 
 # Run locally
 
 ```sh
-- yarn dev
+yarn dev
 ```
