@@ -291,12 +291,11 @@ function Order({ params }) {
                     <p>Loading</p>
                   ) : (
                     <div>
-                      {/* <PayPalButtons
+                      <PayPalButtons
                         createOrder={createOrder}
                         onApprove={onApprove}
                         onError={onError}
-                      ></PayPalButtons> */}
-                      hello
+                      ></PayPalButtons>
                     </div>
                   )}
                 </div>
