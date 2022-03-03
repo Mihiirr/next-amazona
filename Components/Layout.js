@@ -35,7 +35,7 @@ function Layout(props) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         /> */}
-        <title>{props.title}</title>
+        <title>{props.title}-working</title>
       </Head>
 
       {/* Header */}
@@ -45,7 +45,7 @@ function Layout(props) {
       {/* Footer */}
       <div className={styles.footerContainer}>
         <footer className={styles.footer}>
-          <strong>All rights reserved by Amazona.</strong>
+          <strong>All rights reserved by Amazona-working-version.</strong>
         </footer>
       </div>
       {DropDown.open && (
